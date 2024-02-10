@@ -1,20 +1,18 @@
-import { root } from "./elements.js"
-import { signinfirebase } from "../controller/firebase_auth.js";
+import { root } from "./elements.js";
+import { signinFirebase } from "../controller/firebase_auth.js";
 
 export async function signinPageView() {
-    const response = await fetch('/view/templates/signin_page_template.html',
-        {cache: 'no-store'}
-    );
+    const response = await fetch('/view/templates/signin_page_template.html', {cache: 'no-store'});
 
-    const divwrapper = document.createElement('div');
-    divwrapper.style.width = "400px";
-    divwrapper.classList.add('m-4','p-4');
-    divwrapper.innerHTML = await response.text();
+    const divWrapper = document.createElement('div');
+    divWrapper.style.width = "400px";
+    divWrapper.classList.add('m-4', 'p-4');
+    divWrapper.innerHTML = await response.text();
 
-    //attach form submit event listner
-    const form = divwrapper.getElementsByTagName('form')[0];
-    form.onsubmit = signinfirebase;
-    root.innerHTML = ""; // clear current page rendering
-    root.appendChild(divwrapper);
+    //attach form submit event listener
+    const form = divWrapper.getElementsByTagName('form')[0];
+    form.onsubmit = signinFirebase;
 
+    root.innerHTML = '';
+    root.appendChild(divWrapper);
 }

@@ -1,18 +1,17 @@
 import { homePageView } from "../view/home_page.js";
-import { Menu2PageView } from "../view/menu2_page.js";
-import { signoutfirebase } from "./firebase_auth.js";
-import { routePathenames } from "./route_controller.js";
-
+import { PlayRecordPageView } from "../view/playrecord_page.js";
+import { signOutFirebase } from "./firebase_auth.js";
+import { routePathnames } from "./route_controller.js";
 export function onClickHomeMenu(e) {
-    history.pushState(null, null, routePathenames.HOME)
+    history.pushState(null, null, routePathnames.HOME);
     homePageView();
 }
 
-export function onClickMenu2Menu(e) {
-    history.pushState(null, null, routePathenames.MENU2)
-    Menu2PageView();
+export function onClickPlayRecord(e) {
+    history.pushState(null, null, routePathnames.PLAYRECORD);
+    PlayRecordPageView();
 }
 
-export async function onclickSignoutMenu(e){
-    await signoutfirebase(e);
+export async function onClickSignoutMenu(e) {
+    await signOutFirebase(e);
 }
