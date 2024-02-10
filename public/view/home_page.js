@@ -7,7 +7,7 @@ import { GameState, TicTacToeGame, marking } from "../model/tictactoe_game.js";
 export const images = {
     X: '/images/X.png',
     O: '/images/O.png',
-    U: '/images/U.jpeg',
+    U: '/images/U.png',
 };
 export let game = new TicTacToeGame();
 
