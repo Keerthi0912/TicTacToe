@@ -1,6 +1,6 @@
 import {
     getFirestore, collection, addDoc, query, where, orderBy, getDocs,
-} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js"
+} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 import { app } from "./firebase_core.js";
 
 const TicTacToeGameCollection = 'tictactoe_game';
